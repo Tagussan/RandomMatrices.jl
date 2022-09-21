@@ -13,9 +13,9 @@ end
 function rand(W::Ginibre)
     beta, n = W.beta, W.N
     if beta==1
-        randn(n,n)
+        big.(randn(n,n))
     elseif beta==2
-        randn(n,n)+im*randn(n,n)
+        big.(randn(n,n)+im*randn(n,n))
     elseif beta==4
         Q0=randn(n,n)
         Q1=randn(n,n)

@@ -30,7 +30,7 @@ function rand(W::Haar, n::Int, doCorrection::Int=1)
         if beta==1
             L = sign.(rand(n).-0.5)
         elseif beta==2
-            L = exp.(im*rand(n)*2pi)
+            L = exp.(im*big.(rand(n))*2pi)
         elseif beta==4
             L = exp.(im*rand(2n)*2pi)
         else
